@@ -14,10 +14,7 @@
 2. [Características Principales](#-características-principales)
 3. [APIs Integradas](#-apis-integradas)
 4. [Estructura del Proyecto](#-estructura-del-proyecto)
-5. [Detalles Técnicos](#-detalles-técnicos)
 6. [Diseño UI/UX](#-diseño-uiux)
-7. [Persistencia de Datos](#-persistencia-de-datos)
-8. [Capturas Adicionales](#-capturas-adicionales)
 
 ## 🚀 Instalación y Ejecución
 

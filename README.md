@@ -1,7 +1,7 @@
 # 🎌 WebToon App - Aplicación de Módulos JavaScript con Estilo Anime/Manga
 
-**Alumno:** Leandro Márquez  
-**Tecnologías:** HTML5, CSS3, JavaScript Vanilla  
+**Alumno:** Leandro Marquez  
+**Tecnologías:** HTML5, CSS, JavaScript Vanilla  
 **Licencia:** MIT  
 **Fecha:** 2025
 

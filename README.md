@@ -5,7 +5,7 @@
 **Licencia:** MIT  
 **Fecha:** 2025
 
-![Pantalla Principal]![WebToon](https://github.com/user-attachments/assets/c8793a96-fd91-4124-bf42-7ef9e2fde2e6)
+![WebToon](https://github.com/user-attachments/assets/c8793a96-fd91-4124-bf42-7ef9e2fde2e6)
  
 *Captura completa de la interfaz estilo manga*
 
@@ -39,7 +39,7 @@ open index.html   # macOS
 xdg-open index.html  # Linux
 O en su defecto en Live Server
 ```
-
+```bash
 🌟 Características Principales
 Módulo de Tareas
 ✅ Añadir/eliminar tareas

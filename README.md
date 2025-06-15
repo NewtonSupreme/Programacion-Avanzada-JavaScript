@@ -37,7 +37,7 @@ xdg-open index.html  # Linux
 O en su defecto en Live Server
 ```
 ```bash
-###🌟 Características Principales
+🌟 Características Principales
 Módulo de Tareas
 ✅ Añadir/eliminar tareas
 ✅ Filtrar por: Todas/Pendientes/Completadas

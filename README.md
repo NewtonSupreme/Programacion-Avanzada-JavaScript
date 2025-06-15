@@ -3,7 +3,7 @@
 **Alumno:** Leandro Márquez  
 **Tecnologías:** HTML5, CSS3, JavaScript Vanilla  
 **Licencia:** MIT  
-**Fecha:** 2023
+**Fecha:** 2025
 
 ![Pantalla Principal]![WebToon](https://github.com/user-attachments/assets/c8793a96-fd91-4124-bf42-7ef9e2fde2e6)
  

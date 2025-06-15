@@ -1,0 +1,190 @@
+<!-- /* 
+  Sumativa: Programación Avanzada JavaScript
+  Por: Leandro Marquez. 
+  Para: Programación V - UBA
+*/ -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación WebToon - Módulos Integrados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <div class="webtoon-container">
+        <!-- Cabecera estilo manhwa -->
+        <header class="webtoon-header">
+            <div class="title-bubble">
+                <h1>WebToon App</h1>
+                <div class="bubble-tail"></div>
+            </div>
+            <p class="subtitle">Módulos JavaScript Avanzados con Estilo Manhwa</p>
+            <div class="manga-decoration"></div>
+        </header>
+
+        <!-- Navegación con estilo webtoon -->
+        <nav class="webtoon-nav">
+            <button class="nav-btn active" data-module="tasks"><i class="fas fa-tasks"></i> Mi Día Organizado</button>
+            <button class="nav-btn" data-module="quotes"><i class="fas fa-book"></i> Citas de Anime</button>
+            <button class="nav-btn" data-module="currency"><i class="fas fa-exchange-alt"></i> Economía Global</button>
+            <button class="nav-btn" data-module="quiz"><i class="fas fa-brain"></i> Reto de Conocimiento</button>
+        </nav>
+
+        <!-- Contenedor principal de módulos -->
+        <main class="webtoon-main">
+            <!-- Módulo 1: Gestor de Tareas -->
+            <section class="module active" id="tasks-module">
+                <div class="module-header">
+                    <h2><i class="fas fa-tasks"></i> Mi Día Organizado</h2>
+                    <div class="manga-effect"></div>
+                </div>
+                <div class="module-content">
+                    <div class="task-form bubble">
+                        <input type="text" class="task-input" placeholder="Agregar nueva tarea..." id="taskInput">
+                        <button class="add-task-btn" id="addTaskBtn"><i class="fas fa-plus"></i> Añadir</button>
+                    </div>
+                    <div class="task-filters">
+                        <button class="filter-btn active" data-filter="all">Todas</button>
+                        <button class="filter-btn" data-filter="active">Pendientes</button>
+                        <button class="filter-btn" data-filter="completed">Completadas</button>
+                    </div>
+                    <div class="task-stats bubble">
+                        <span id="totalTasks">Total: 0</span>
+                        <span id="completedTasks">Completadas: 0</span>
+                        <span id="pendingTasks">Pendientes: 0</span>
+                    </div>
+                    <ul class="task-list" id="taskList"></ul>
+                </div>
+            </section>
+
+            <!-- Módulo 2: Citas de Anime -->
+            <section class="module" id="quotes-module">
+                <div class="module-header">
+                    <h2><i class="fas fa-book"></i> Citas de Anime</h2>
+                    <div class="manga-effect"></div>
+                </div>
+                <div class="module-content">
+                    <div class="quote-display bubble" id="quoteDisplay">
+                        <div class="loading-quote">
+                            <div class="manga-spinner"></div>
+                            <p>Cargando cita inspiradora...</p>
+                        </div>
+                    </div>
+                    <div class="quote-controls">
+                        <button class="quote-btn" id="dailyQuoteBtn">Cita Aleatoria</button>
+                        <button class="quote-btn" id="saveQuoteBtn"><i class="fas fa-bookmark"></i> Guardar</button>
+                    </div>
+                    <div class="saved-quotes bubble">
+                        <h3><i class="fas fa-bookmark"></i> Tus Citas Guardadas</h3>
+                        <div class="saved-quotes-container" id="savedQuotes"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Módulo 3: Conversor de Divisas -->
+            <section class="module" id="currency-module">
+                <div class="module-header">
+                    <h2><i class="fas fa-exchange-alt"></i> Economía Global</h2>
+                    <div class="manga-effect"></div>
+                </div>
+                <div class="module-content">
+                    <div class="converter-container">
+                        <div class="converter-form bubble">
+                            <div class="converter-group">
+                                <label class="converter-label">De:</label>
+                                <select class="converter-select" id="fromCurrency">
+                                    <option value="USD">USD - Dólar Estadounidense</option>
+                                    <option value="EUR">EUR - Euro</option>
+                                    <option value="GBP">GBP - Libra Esterlina</option>
+                                    <option value="JPY">JPY - Yen Japonés</option>
+                                    <option value="KRW">KRW - Won Surcoreano</option>
+                                    <option value="CNY">CNY - Yuan Chino</option>
+                                </select>
+                            </div>
+                            <div class="converter-group">
+                                <label class="converter-label">A:</label>
+                                <select class="converter-select" id="toCurrency">
+                                    <option value="EUR">EUR - Euro</option>
+                                    <option value="USD" selected>USD - Dólar Estadounidense</option>
+                                    <option value="GBP">GBP - Libra Esterlina</option>
+                                    <option value="JPY">JPY - Yen Japonés</option>
+                                    <option value="KRW">KRW - Won Surcoreano</option>
+                                    <option value="CNY">CNY - Yuan Chino</option>
+                                </select>
+                            </div>
+                            <div class="converter-group">
+                                <label class="converter-label">Cantidad:</label>
+                                <input type="number" class="converter-input" id="amount" value="1" min="0.01" step="0.01">
+                            </div>
+                            <button type="button" class="convert-btn" id="convertBtn">Convertir</button>
+                        </div>
+                        <div class="converter-result bubble">
+                            <h3>Resultado:</h3>
+                            <div class="result-display" id="conversionResult">-</div>
+                            <div class="rate-info" id="rateInfo">Tasa actual: -</div>
+                        </div>
+                    </div>
+                    <div class="currency-chart bubble">
+                        <h3><i class="fas fa-chart-line"></i> Historial de Tasas (7 días)</h3>
+                        <canvas id="currencyChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Módulo 4: Cuestionario Interactivo en Español -->
+            <section class="module" id="quiz-module">
+                <div class="module-header">
+                    <h2><i class="fas fa-brain"></i> Reto de Conocimiento</h2>
+                    <div class="manga-effect"></div>
+                </div>
+                <div class="module-content">
+                    <div class="quiz-container">
+                        <div class="quiz-header bubble">
+                            <div class="quiz-progress">
+                                Pregunta <span id="currentQuestion">1</span> de <span id="totalQuestions">5</span>
+                            </div>
+                            <div class="quiz-score">
+                                Puntuación: <span id="currentScore">0</span>
+                            </div>
+                        </div>
+                        <div class="quiz-question bubble" id="quizQuestion">
+                            <div class="loading-quiz">
+                                <div class="manga-spinner"></div>
+                                <p>Cargando cuestionario...</p>
+                            </div>
+                        </div>
+                        <div class="quiz-options" id="quizOptions"></div>
+                        <div class="quiz-feedback bubble" id="quizFeedback"></div>
+                        <div class="quiz-controls">
+                            <button class="quiz-btn" id="prevQuestionBtn" disabled><i class="fas fa-arrow-left"></i> Anterior</button>
+                            <button class="quiz-btn" id="nextQuestionBtn" disabled>Siguiente <i class="fas fa-arrow-right"></i></button>
+                            <button class="quiz-btn" id="restartQuizBtn"><i class="fas fa-redo"></i> Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Notificaciones estilo manga -->
+        <div class="notification-area" id="notificationArea"></div>
+
+        <!-- Pie de página -->
+        <footer class="webtoon-footer">
+            <div class="footer-content">
+                <p>Aplicación Web Integrada con JavaScript Avanzado</p>
+                <p>Estilo WebToon & Manhwa | Todos los derechos reservados</p>
+                <div class="manga-decoration"></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>
+

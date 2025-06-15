@@ -38,6 +38,7 @@ start index.html  # Windows
 open index.html   # macOS
 xdg-open index.html  # Linux
 O en su defecto en Live Server
+```
 
 🌟 Características Principales
 Módulo de Tareas
@@ -68,7 +69,7 @@ Frankfurter	Datos de divisas	https://api.frankfurter.app/latest	Conversión mone
 Nota: Ambas APIs son de uso libre sin necesidad de autenticación(Públicas)
 
 🏗️ Estructura del Proyecto
-plaintext
+
 webtoon-app/
 │
 ├── index.html            # Estructura HTML principal

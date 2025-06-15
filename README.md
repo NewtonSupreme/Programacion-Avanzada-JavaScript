@@ -67,7 +67,8 @@ API	Descripción	Endpoint	Uso
 AnimeChan	Citas aleatorias de anime	https://animechan.xyz/api/random	Obtener frases inspiradoras
 Frankfurter	Datos de divisas	https://api.frankfurter.app/latest	Conversión monetaria
 Nota: Ambas APIs son de uso libre sin necesidad de autenticación(Públicas)
-
+```
+```bash
 🏗️ Estructura del Proyecto
 
 webtoon-app/
@@ -76,12 +77,13 @@ webtoon-app/
 │
 ├── style.css         # Todos los estilos
 │
-├── script.js  # Lógica principal (1200 líneas)
+├── script.js  # Lógica principal
 │   │   # Gestor de tareas
 │   │   # Sistema de citas
 │   │   # Conversor
 │   │   # Cuestionario
-
+```
+```bash
 ⚙️ Detalles Técnicos
 Implementación JavaScript
 
@@ -106,7 +108,8 @@ class TaskManager {
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 }
-
+```
+```bash
 Estructura CSS Clave
 
 css
@@ -130,7 +133,8 @@ css
   border-right: 15px solid transparent;
   border-top: 15px solid #3a0ca3;
 }
-
+```
+```bash
 🎨 Diseño UI/UX
 Principios de Diseño
 Estilo Visual Manga:
@@ -157,6 +161,8 @@ Esquema de Almacenamiento
 Key	Datos Almacenados	Ejemplo
 tasks	Array de objetos tarea	[{id: 123, description: "Estudiar JS", completed: false}]
 savedQuotes	Citas favoritas	[{quote: "Texto...", character: "Naruto"}]
+```
+```bash
 Métodos Clave
 
 // Guardar datos
